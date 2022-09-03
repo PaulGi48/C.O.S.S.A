@@ -17,9 +17,10 @@ Author URL: http://w3layouts.com
     <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="js/move-top.js"></script>
     <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event) {
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
                 event.preventDefault();
                 $('html,body').animate({
                     scrollTop: $(this.hash).offset().top
@@ -44,15 +45,15 @@ Author URL: http://w3layouts.com
     <!---//webfonts--->
     <!----start-top-nav-script---->
     <script>
-        $(function() {
+        $(function () {
             var pull = $('#pull');
             menu = $('nav ul');
             menuHeight = menu.height();
-            $(pull).on('click', function(e) {
+            $(pull).on('click', function (e) {
                 e.preventDefault();
                 menu.slideToggle();
             });
-            $(window).resize(function() {
+            $(window).resize(function () {
                 var w = $(window).width();
                 if (w > 320 && menu.is(':hidden')) {
                     menu.removeAttr('style');
@@ -62,7 +63,6 @@ Author URL: http://w3layouts.com
     </script>
     <!----//End-top-nav-script---->
 </head>
-</head>
 
 <body>
     <!----- start-header---->
@@ -70,7 +70,7 @@ Author URL: http://w3layouts.com
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" title="yellow" /></a>
+                    <a href="index.html"><img src="images/logo.png" title="COSSA ATOM"></a>
                 </div>
                 <!----start-top-nav---->
                 <nav class="top-nav">
@@ -78,91 +78,54 @@ Author URL: http://w3layouts.com
 
                         <li class="active"><a href="index.html">Home </a></li>
                         <li><a href="About Us.html">About</a></li>
+                        <li></li>
                         <li><a href="News.html">News</a></li>
                         <li><a href="Alumni.html">Alumni</a></li>
-                        <li><a href="Our Executives.html">Our Executives</a></li>
-                        <li><a href="Social.html">Contact</a></li>
+                        <li><a href="Academics.html">Academics</a></li>
+
                     </ul>
-                    <a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
                 </nav>
                 <div class="clearfix"> </div>
             </div>
         </div>
     </div>
-    <!----- //End-header---->
-    <!---banner---->
 
-
-    <script>
-        var responsiveSlider = function() {
-
-            var slider = document.getElementById("slider");
-            var sliderWidth = slider.offsetWidth;
-            var slideList = document.getElementById("slideWrap");
-            var count = 1;
-            var items = slideList.querySelectorAll("li").length;
-            var prev = document.getElementById("prev");
-            var next = document.getElementById("next");
-
-            window.addEventListener('resize', function() {
-                sliderWidth = slider.offsetWidth;
-            });
-
-            var prevSlide = function() {
-                if (count > 1) {
-                    count = count - 2;
-                    slideList.style.left = "-" + count * sliderWidth + "px";
-                    count++;
-                } else if (count = 1) {
-                    count = items - 1;
-                    slideList.style.left = "-" + count * sliderWidth + "px";
-                    count++;
-                }
-            };
-
-            var nextSlide = function() {
-                if (count < items) {
-                    slideList.style.left = "-" + count * sliderWidth + "px";
-                    count++;
-                } else if (count = items) {
-                    slideList.style.left = "0px";
-                    count = 1;
-                }
-            };
-
-            next.addEventListener("click", function() {
-                nextSlide();
-            });
-
-            prev.addEventListener("click", function() {
-                prevSlide();
-            });
-
-            setInterval(function() {
-                nextSlide()
-            }, 5000);
-
-        };
-
-        window.onload = function() {
-            responsiveSlider();
-        }
-    </script>
-
-    <div class=" banner text-center " id=" slider ">
-        <h1><span>Alivuam tinc</span><br /><label>Nunc dignissim risus id metus</label></h1>
-    </div>
-
-
-
+  
 
     <!---//banner---->
-    <div class="clearfix "> </div>
-    <!---welcome-note--->
     <div class="welcome-note text-center ">
+    <div>
+        <marquee behavior="scroll" direction="left">WELCOME TO COLLEGE OF SCIENCE STUDENT ASSOCIATION WEBSITE ; HERE IS THE NEWS MARQUEE</marquee>
+    </div>
+    <div class="clearfix"> </div>
+        <div class=" banner text-center " id=" slider ">
+        <div id="owl-demo" class="owl-carousel">
+            <div class="item">
+                <img class="lazyOwl" data-src="images/12.  A section of the Physics Lab Store_595.jpg"
+                    alt="screen-name">
+            </div>
+            <div class="item">
+                <img class="lazyOwl" data-src="images/2. A section of Biology Lab_595.jpg" alt="screen-name">
+            </div>
+            <div class="item">
+                <img class="lazyOwl"
+                    data-src="images/6th Convocation Ceremony, Afe Babalola University Ado-Ekiti, Ekiti State, Nigeria_03_595.jpg"
+                    alt="screen-name">
+            </div>
+        </div>
+        <!--//sreen-gallery-cursual---->
+    </div>
+</div>
+</div>
+<h1>
+    <span="center">Alivuam tinc</span><br /><label>Nunc dignissim risus id metus</label>
+</h1>
+<!---row3---->
+<!---copy-right--->
         <div class="container ">
             <h2>Morbi interdum mollis sapien edac risus</h2>
-            <p>Integer vitae libero ac risus egestas placerat lectus arcu pulvinar risus vitae facilisis libero dolor a purus</p>
+            <p>Integer vitae libero ac risus egestas placerat lectus arcu pulvinar risus vitae facilisis libero dolor a
+                purus</p>
             <ul class="note-btns unstyled-list list-inline ">
                 <li><a href="# ">Lorem Ipsum</a></li>
                 <li><a href="# ">Vivamus sin</a></li>
@@ -181,7 +144,8 @@ Author URL: http://w3layouts.com
                 <div class="col-md-9 col-info ">
                     <h3>Jorem ipsum</h3>
                     <span>Cestibulum auctor dapibus neque</span>
-                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam am dui mi, tincidunt quis, accumsan porttitor, facilisis</p>
+                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies
+                        in, diam am dui mi, tincidunt quis, accumsan porttitor, facilisis</p>
                     <a class="m-btn " href="# ">More</a>
                 </div>
                 <div class="border-r "> </div>
@@ -193,7 +157,8 @@ Author URL: http://w3layouts.com
                 <div class="col-md-9 col-info ">
                     <h3>Jorem ipsum</h3>
                     <span>Cestibulum auctor dapibus neque</span>
-                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam am dui mi, tincidunt quis, accumsan porttitor, facilisis</p>
+                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies
+                        in, diam am dui mi, tincidunt quis, accumsan porttitor, facilisis</p>
                     <a class="m-btn " href="# ">More </a>
                 </div>
             </div>
@@ -202,17 +167,52 @@ Author URL: http://w3layouts.com
     </div>
     <!---row1---->
     <!---row2---->
-    <div class="row2 ">
+    <div class="row1 ">
         <div class="container " <div class="row2-cols ">
             <div class="col-md-4 row2-col-divice ">
                 <img src="images/row2-divices.png " title="name " />
             </div>
             <div class="col-md-8 row2-col-info ">
-                <h3>Vivamus vestibulum nulla nec ante</h3>
-                <span>Cestibulum auctor dapibus neque lobortis lorem at ipsum semper sagittis.</span>
-                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam am dui mi, tincidunt quis, accumsan porttitor, facilisis bi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in,
-                    pharetra a, ultricies in, diam. Sed arcu. Cras consequat. ed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna.</p>
-                <a class="r2-btn " href="# ">More</a>
+                <h3>College Of Science - Commitment</h3>
+                <span>Commitment</span>
+                <p>
+                    The College is committed, through these various programmes, to produce the best graduates in the
+                    different disciplines bearing in mind the vision and mission of the founder of the University, Aare
+                    Afe Babalola, B.ScEcons (London), LL.B Hons (London), LL.D, FCIArb, FNILAS, OFR, CON, Senior
+                    Advocate of Nigeria (SAN), a renowned Philanthropist and one of the distinguished legal luminaries
+                    of the present age. He has dedicated so much of his life to the cause of higher education and has
+                    spoken so much about the exigencies of Nigerian Universities. ABUAD is a practical demonstration of
+                    these long-standing conviction and experiences while the College of Science of the University
+                    provides the spring board in this regard.
+
+                    It is part of the philosophy of the College of Sciences of this University to engage in innovative
+                    and result-oriented inter-disciplinary scientific research, be a citadel for ceaseless search for
+                    new and positive scientific knowledge that will guarantee sustainable development and remain a
+                    fountain of the purest and highest attainable standards of human knowledge, incorporating global
+                    best practices and cutting-edge scientific methodologies. In particular, the objectives of the
+                    College include the following:
+
+                    To create the most conducive atmosphere possible for intellectual pursuits by students and other
+                    researchers within its physical and virtual environment;
+                    To raise the standard of scientific education to an enviable level in Nigeria and Africa;
+                    Create and remain a rallying point for the best categories of scientists around the world by
+                    advancing the frontiers of scientific knowledge to meet the vast challenges confronting the global
+                    world;
+                    To nurture students in the art of scientific enquiries and groom them into visionary graduates who
+                    are capable of envisaging tomorrow’s scientific problems and through environmentally friendly
+                    procedures that will guarantee sustainable development;
+                    To bridge the gap between “town and gown” by raising graduates who are immediately relevant to the
+                    society and key players in the global market place; and
+                    To create a new paradigm in scientific research discovery and output in order to reverse the present
+                    global development divide between the developed and developing world, and help the African continent
+                    take the necessary lead in the 21stCentury globalization. This will not strive to create winners and
+                    losers but will ensure healthy competition, effective global interdependence and mutually beneficial
+                    exploration of the world resources.
+                    The College of Sciences is uncompromisingly committed to the scientific advancement of the human
+                    society, protection of the environment and making Nigeria and the African continent a pride of place
+                    in the world.
+                </p>
+                <a class="r2-btn " href="About Us.html">More</a>
             </div>
             <div class="clearfix "> </div>
         </div>
@@ -220,10 +220,10 @@ Author URL: http://w3layouts.com
     </div>
     <!---row2---->
     <!---row3---->
-    <div class="row3 ">
+    <div class="row2 ">
         <div class="container ">
             <div class="row3-head text-center ">
-                <h4</h4>
+                <h4></h4> 
                     <span></span>
                     <p> </p>
             </div>
@@ -233,7 +233,7 @@ Author URL: http://w3layouts.com
                 <link href="css/owl.carousel.css " rel="stylesheet ">
                 <script src="js/owl.carousel.js "></script>
                 <script>
-                    $(document).ready(function() {
+                    $(document).ready(function () {
                         $("#owl-demo ").owlCarousel({
                             items: 1,
                             lazyLoad: true,
@@ -246,26 +246,63 @@ Author URL: http://w3layouts.com
                 </script>
                 <!-- //requried-jsfiles-for owl -->
                 <!-- start content_slider -->
-                <div id="owl-demo" class="owl-carousel">
-                    <div class="item">
-                        <img class="lazyOwl" data-src="images/12.  A section of the Physics Lab Store_595.jpg" alt="screen-name">
-                    </div>
-                    <div class="item">
-                        <img class="lazyOwl" data-src="images/2. A section of Biology Lab_595.jpg" alt="screen-name">
-                    </div>
-                    <div class="item">
-                        <img class="lazyOwl" data-src="images/6th Convocation Ceremony, Afe Babalola University Ado-Ekiti, Ekiti State, Nigeria_03_595.jpg" alt="screen-name">
+    <footer>
+
+        <div class="ac-ms-bottom-footer-container">
+            <div class="ac-ms-bottom-footer-left"
+                style="font-size: 1.2rem; line-height: 24px; font-family: Segoe-UI; vertical-align:middle; color: rgb(0, 0, 0); background: transparent; display: block; border: 1px solid rgb(227, 227, 227); margin-left: unset; width: auto; margin-top: 6px;">
+                <h2>Follow COSSA</h2>
+            </div>
+            <div style="float: left; margin-top: 9px;"><a href="https://www.linkedin.com/company/microsoft"
+                    target="_blank" style="margin-right: 12px;"><img
+                        src="https://prodcmscdn.azureedge.net/careerconnectresources/p/MICRUS/en_us/desktop/assets/images/linkedin-icon.svg"
+                        alt="LinkedIn"></a><a href="https://twitter.com/COSSAABUAD" target="_blank"
+                    style="margin-right: 12px;"><img
+                        src="https://prodcmscdn.azureedge.net/careerconnectresources/p/MICRUS/en_us/desktop/assets/images/twitter-icon.svg"
+                        alt="Twitter"></a><a href="https://www.facebook.com/COSSAABUAD" target="_blank"
+                    style="margin-right: 12px;"><img
+                        src="https://prodcmscdn.azureedge.net/careerconnectresources/p/MICRUS/en_us/desktop/assets/images/fb-icon.svg"
+                        alt="Facebook"></a><a href="https://www.instagram.com/COSSAABUAD" target="_blank"
+                    style="margin-right: 0px;"><img
+                        src="https://prodcmscdn.azureedge.net/careerconnectresources/p/MICRUS/en_us/desktop/assets/images/Instagram-icon.svg"
+                        alt="Instagram"></a></div>
+
+
+            <div id="jlcontactinfo-8035-particle" class="g-content g-particle">
+
+                <h3 id="jlcontactinfo-8035" class="g5-particle-title jl-h2">
+                    Get In Touch
+                </h3>
+
+                <div id="jlcontactinfo-8035" class="subnav-wrapper">
+
+                    <div class="jl-flex-middle jl-grid-column-small jl-grid" jl-grid="">
+
+                        <div class="tm-item jl-first-column">
+                            <span class="fa fa-phone fa-lg" aria-hidden="true"></span> (+234) 02-2914-130
+                        </div>
+                        <div class="tm-item">
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span> provost@com.ui.edu.ng
+                        </div>
+                        <div class="tm-item jl-grid-margin">
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span> collegeinfo@com.ui.edu.ng
+                        </div>
+                        <div class="tm-item jl-grid-margin">
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span> alumnirequests@com.ui.edu.ng
+                        </div>
+                        <div class="tm-item jl-grid-margin">
+                            <span class="fa fa-map-marker fa-lg" aria-hidden="true"></span> P.M.B 3017 G.P.O Ibadan,Oyo
+                            State, Nigeria.
+                        </div>
+
                     </div>
                 </div>
-                <!--//sreen-gallery-cursual---->
+
             </div>
-        </div>
-    </div>
-    <!---row3---->
-    <!---copy-right--->
-    <div class="copy-right text-center ">
-        <p>Template by <a href="http://w3layouts.com/ ">w3layouts</a></p>
-        <script type="text/javascript ">
+
+    </footer>
+
+    <script type="text/javascript ">
             $(document).ready(function() {
                 /*
 										var defaults = {
@@ -282,7 +319,7 @@ Author URL: http://w3layouts.com
 
             });
         </script>
-        <a href="# " id="toTop " style="display: block; "> <span id="toTopHover " style="opacity: 1; "> </span></a>
+    <a href="# " id="toTop " style="display: block; "> <span id="toTopHover " style="opacity: 1; "> </span></a>
     </div>
     <!---//copy-right--->
 </body>
